@@ -1,16 +1,152 @@
-# React + Vite
+# **Social Media Content Analyzer**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*A MERN Stack Project for Technical Assessment*
 
-Currently, two official plugins are available:
+This project extracts text from **PDFs** and **image files** (OCR) and suggests improvements to increase **social media engagement**.
+It follows a clean MERN architecture and satisfies all assignment requirements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⚙️ **Features**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📤 **Document Upload**
 
-## Expanding the ESLint configuration
+* Upload **PDF** files
+* Upload **Image** files (JPG, PNG, scanned docs)
+* Supports **Drag & Drop** and **File Picker**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🧠 **Text Extraction**
+
+* **PDF Parsing** via `pdf-parse`
+* **OCR** for images using `Tesseract.js`
+
+### 💡 **Engagement Suggestions**
+
+Automatically suggests:
+
+* Add hashtags
+* Add emojis
+* Add call-to-action
+* Improve post length
+* Add useful links
+* Improve clarity and engagement
+
+### 🎨 **UI Features**
+
+* Clean and responsive React interface
+* Loading states
+* Error handling
+* Nicely structured output cards
+
+---
+
+## 🏗️ **Tech Stack**
+
+### **Frontend**
+
+* React (Vite)
+* Axios
+* Modern CSS
+
+### **Backend**
+
+* Node.js + Express (CommonJS)
+* Multer (file upload)
+* pdf-parse (v1.1.1 stable)
+* Tesseract.js (OCR)
+* dotenv
+* CORS
+
+---
+
+## 📁 **Project Structure**
+
+```
+social-media-content-analyzer/
+│
+├── backend/
+│   ├── src/
+│   │   └── index.js
+│   ├── uploads/
+│   ├── package.json
+│   └── .env
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── .env
+│
+└── README.md
+```
+
+---
+
+## 🛠️ **Setup Instructions**
+
+### **1️⃣ Clone the Repository**
+
+```sh
+git clone <your-repo-url>
+cd social-media-content-analyzer
+```
+
+---
+
+## **2️⃣ Backend Setup**
+
+```sh
+cd backend
+npm install
+```
+
+📌 **IMPORTANT:** Install stable pdf-parse version
+
+```sh
+npm uninstall pdf-parse
+npm install pdf-parse@1.1.1
+```
+
+Run backend:
+
+```sh
+npm run dev
+```
+
+Backend runs at:
+👉 **[http://localhost:5000](http://localhost:5000)**
+
+### **Backend Environment Variables (`backend/.env`)**
+
+```
+PORT=5000
+CLIENT_URL=http://localhost:5173
+```
+
+---
+
+## **3️⃣ Frontend Setup**
+
+```sh
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs at:
+👉 **[http://localhost:5173](http://localhost:5173)**
+
+### **Frontend Environment Variables (`frontend/.env`)**
+
+```
+VITE_API_BASE_URL=http://localhost:5000
+```
+
+---
+
+## 👩‍💻 **Author**
+
+**Yashika Jain**
+GitHub: [https://github.com/yashika532](https://github.com/yashika532)
+
+---
