@@ -179,7 +179,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <span>Built with MERN • Made By Yashika Jain</span>
+        <span>Built with MERN • Tech Assessment Demo</span>
       </footer>
     </div>
   );
